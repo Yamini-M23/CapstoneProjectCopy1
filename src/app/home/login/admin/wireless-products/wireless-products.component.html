@@ -1,0 +1,249 @@
+<!--header-->
+<header class="main-header clearfix" role="header">
+    <div class="logo">
+      <a href="#"><em>Pro</em>Vue</a>
+    </div>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+      <ul class="main-menu">
+        <li><a href="#section1"> <i class="bi bi-house-fill"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+          <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
+          <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>
+        </svg></i>Home</a></li>
+
+         <li> 
+          <div class="main">
+          
+            <div class="input-group">
+               <input type="text" class="form-control" placeholder="Search" id="searchInput" [(ngModel)]="search">
+               <div class="input-group-append">
+                  <button class="btn btn-secondary" type="button" id="searchButton" style="background-color: #f5a425; border-color:#f5a425 ">
+                  <i class="fa fa-search"></i>
+                  </button>
+               </div>
+            </div>
+         </div></li>
+        <!-- <li><a href="wired">WiredProducuts</a></li> -->
+     
+			   <li> 
+          <a routerLink="/wired">
+           <b> <i class="bi bi-router-fill"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-router-fill" viewBox="0 0 16 16">
+            <path d="M5.525 3.025a3.5 3.5 0 0 1 4.95 0 .5.5 0 1 0 .707-.707 4.5 4.5 0 0 0-6.364 0 .5.5 0 0 0 .707.707Z"/>
+            <path d="M6.94 4.44a1.5 1.5 0 0 1 2.12 0 .5.5 0 0 0 .708-.708 2.5 2.5 0 0 0-3.536 0 .5.5 0 0 0 .707.707Z"/>
+            <path d="M2.974 2.342a.5.5 0 1 0-.948.316L3.806 8H1.5A1.5 1.5 0 0 0 0 9.5v2A1.5 1.5 0 0 0 1.5 13H2a.5.5 0 0 0 .5.5h2A.5.5 0 0 0 5 13h6a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5h.5a1.5 1.5 0 0 0 1.5-1.5v-2A1.5 1.5 0 0 0 14.5 8h-2.306l1.78-5.342a.5.5 0 1 0-.948-.316L11.14 8H4.86L2.974 2.342ZM2.5 11a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1Zm4.5-.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0Zm2.5.5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1Zm1.5-.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0Zm2 0a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0Z"/>
+            <path d="M8.5 5.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z"/>
+          </svg>
+				  <span class="padding_10">   Wireline Products</span></b></a>
+			   </li>
+        </ul>
+    </nav>
+   
+    <header>
+        <style>
+            .bd-placeholder-img {
+              font-size: 1.125rem;
+              text-anchor: middle;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              user-select: none;
+            }
+      
+            @media (min-width: 768px) {
+              .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+              }
+            }
+      
+            .b-example-divider {
+              width: 100%;
+              height: 3rem;
+              background-color: rgba(0, 0, 0, .1);
+              border: solid rgba(0, 0, 0, .15);
+              border-width: 1px 0;
+              box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+            }
+      
+            .b-example-vr {
+              flex-shrink: 0;
+              width: 1.5rem;
+              height: 100vh;
+            }
+      
+            .bi {
+              vertical-align: -.125em;
+              fill: currentColor;
+            }
+      
+            .nav-scroller {
+              position: relative;
+              z-index: 2;
+              height: 2.75rem;
+              overflow-y: hidden;
+            }
+      
+            .nav-scroller .nav {
+              display: flex;
+              flex-wrap: nowrap;
+              padding-bottom: 1rem;
+              margin-top: -1px;
+              overflow-x: auto;
+              text-align: center;
+              white-space: nowrap;
+              -webkit-overflow-scrolling: touch;
+            }
+      
+            .btn-bd-primary {
+              --bd-violet-bg: #712cf9;
+              --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+      
+              --bs-btn-font-weight: 600;
+              --bs-btn-color: var(--bs-white);
+              --bs-btn-bg: var(--bd-violet-bg);
+              --bs-btn-border-color: var(--bd-violet-bg);
+              --bs-btn-hover-color: var(--bs-white);
+              --bs-btn-hover-bg: #6528e0;
+              --bs-btn-hover-border-color: #6528e0;
+              --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+              --bs-btn-active-color: var(--bs-btn-hover-color);
+              --bs-btn-active-bg: #5a23c8;
+              --bs-btn-active-border-color: #5a23c8;
+            }
+            .bd-mode-toggle {
+              z-index: 1500;
+            }
+          </style>
+      </header>
+
+  </header>
+
+   <!-- ***** Main Banner Area Start ***** -->
+   <section class="section coming-soon" data-section="section3">
+    <div class="container">
+      
+      <div class="row">
+        <div class="col-md-10 col-xs-17">
+          <div class="continer centerIt">
+            <h4><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+            </svg> {{username}}</h4>
+            <div>
+              <h4><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
+                <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
+                <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
+              </svg><em>  Wireless Wonders for a Digital World </em> 
+            <br>
+          <br> <em>"</em>Borderless Conversations, Budget-Friendly Calls<em>"</em></h4>
+        </div>
+              <br>
+              <br>
+              <br>
+              <div class="counter">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                  <input type="radio" class="btn-check" name="category" id="btnradio1" autocomplete="off"  [(ngModel)]="category"  value="Enterprise">
+                  <label class="btn btn-outline-warning" for="btnradio1">Enterprise</label>
+                
+                  <input type="radio" class="btn-check" name="category" id="btnradio2" autocomplete="off" [(ngModel)]="category"  value="Business">
+                  <label class="btn btn-outline-warning" for="btnradio2">Business</label>
+        
+                  <input type="radio" class="btn-check" name="category" id="btnradio3" autocomplete="off" [(ngModel)]="category"  value="Consumer" checked>
+                  <label class="btn btn-outline-warning" for="btnradio3">Consumer</label>
+              
+                </div>
+
+
+
+                <div   class="col-md-2 pageElement" style="margin-left: 220px;">
+
+                  <select [(ngModel)]="productsubcategory" name="productsubcategory" id="inputState" class="form-select custom-select" style="width: 350px; height: 40px;">
+                
+                    <option value="FilterByProductSubCategory" disabled selected>Filter By Product Sub-Category</option>
+                
+                    <option *ngFor="let c of productsubcategory" >{{c}}</option>
+                
+                    <option value="ALL">ALL</option>
+                    <option value="PrePaid">PREPAID</option>
+                    <option value="PostPaid">POSTPAID</option>
+                
+                  </select>
+                
+                </div>
+
+              </div>
+            
+          </div>
+        </div>
+         
+      </div>
+    </div>
+</section>  
+
+    <section class="cards-wrapper">
+      
+      <div *ngFor="let p of Products | searchFilter:search| categoryFilter:category | productSubCategory:productsubcategory ">
+
+        
+    <div class="card-grid-space">
+       
+    <!-- <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button> -->
+    <br>
+    <br>
+   <!-- <div class="card" > -->
+    <!-- <div class="num">01</div> -->
+    <!-- <a class="card" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)"> -->
+
+      <a class="card" style="--bg-img: url(..\assets\images\recharge2.png)">
+    <div>
+    <!-- <h1>Plan-Rs 299/Month</h1> -->
+
+    
+
+    <div class="text-center border-bottom p-4 pt-5">
+
+        <h4 class="border-bottom pb-3"><i class="fa fw-normal text-primary me-3"></i><b>₹ {{p.plan}}</b></h4>
+       
+        <h4 class="fw-bold">Subscriptions</h4>
+        <div *ngFor="let s of p.subscriptions">
+         <p class="mb-0"><b>{{s}}<i class="bi bi-tv-fill"></i></b></p>
+         <!-- <p class="border-bottom pb-3"></p> -->
+
+        <!-- <p class="mb-0"><b>Netflix <i class="bi bi-cloud-fill"></i></b></p>
+
+        <p class="mb-0"><b>Zee5 <i class="bi bi-film"></i></b></p> -->
+
+    </div>
+    <p class="border-bottom pb-3"></p>
+    <div class="p-4">
+
+        <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>Pack validity  {{p.validity}}</p>
+
+        <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>Total data   {{p.data}}</p>
+
+        <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>Data at high speed*   {{p.dataperday}}</p>
+
+        <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>Voice    {{p.voice}}</p>
+
+        <p class="mb-0"><i class="fa fa-check text-primary me-3"></i>SMS     {{p.sms}}</p>
+
+    </div></div>
+    <p></p>
+    <div class="date">{{p.productsubcategory}}</div>
+    <div class="tags">
+      <!-- <button type="submit" id="form-submit" class="button" >Buy</button><br> -->
+      <button type="submit" id="form-submit" class="button" class="padding_10"  data-toggle="modal" data-target="#loginModal"  routerLink="/viewplans" (click)="editPlan(p)">Edit Plan</button>
+      <button type="submit" id="form-submit" class="button" (click)="deletePlan(p)">Delete Plan</button>
+    </div>
+   
+    <!-- </div> -->
+    </div>
+    
+  </a>
+    </div>
+    </div>
+    
+  </section>
+
+  <!-- <app-view-plans [id]="editproducts"></app-view-plans> -->
+
+  

@@ -1,0 +1,31 @@
+.section{
+    text-align: center;
+}
+.form-check-input
+{
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+.form-check-label
+{
+    display: inline-block;
+    /* margin-right: 20px; */
+    margin-left: 5px;
+}
+
+.col-md-12 
+{
+    color: white;
+    font-size: inherit;
+   text-align: left;
+   margin-bottom: 10px;
+}
+
+.form-check{
+    display: inline-block;
+    align-items: center;
+    margin-right: 20px;
+
+}

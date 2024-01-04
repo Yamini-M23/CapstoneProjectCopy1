@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>ProVue</title>
+
+    <!-- Icons font CSS-->
+    <link href="C:\Users\yamini.m\Desktop\Capstone Project\ProC\src\assets\vendor\mdi-font\css\material-design-iconic-font.min.css" rel="stylesheet" media="all"> 
+     <link href="C:\Users\yamini.m\Desktop\Capstone Project\ProC\src\vendor\font-awesome-4.7\css\font-awesome.min.css" rel="stylesheet" media="all"> 
+    <!-- Font special for pages-->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"> -->
+
+    <!-- Vendor CSS-->
+    <link href="C:\Users\yamini.m\Desktop\Capstone Project\ProC\src\assets\vendor\select2\select2.min.css" rel="stylesheet" media="all">
+    <link href="C:\Users\yamini.m\Desktop\Capstone Project\ProC\src\vendor\datepicker\daterangepicker.css" rel="stylesheet" media="all"> 
+
+    <!-- Main CSS-->
+    <link href="register.component.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-1" style="background-color: rgba(11, 26, 43, 0.886)">
+                <div class="card-heading" style="margin-left: 150px; color: #f5a425;"><br><br>
+                <h3> <b>Register here to add more magic to our Product Catalog World</b>  </h3></div>
+                <br>
+                <div class="card-body" style="margin-left: 300px;">
+                
+  <div class="header home">
+
+    <div class="col-lg-6 wow slideInUp" >
+    
+        <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    
+            <div class="row g-3">
+    
+                <div class="col-md-6">
+    
+                    <label for="Admin Name">NAME</label>
+    
+                    <input type="text" class="form-control btn-outline-dark border-0 bg-light px-4" formControlName="adminName" [class.is-invalid]="adminName.invalid && adminName.touched" placeholder="Your Name" style="height: 55px;">
+    
+                <div *ngIf="adminName.touched">
+    
+                    <div *ngIf="adminName.invalid">
+    
+                        <small style="color: red;" *ngIf="adminName.errors?.['required']">Admin name required,please fill out the required field</small>
+    
+                        <small style="color:red;" *ngIf="adminName.errors?.['pattern']">Invalid Name, Admin name must contain atleast 2 characters and only alphabets</small>
+    
+                   
+    
+                    </div>
+    
+                </div>
+    
+                </div>
+    
+                <div class="col-md-6">
+    
+                    <label for="Admin Email">EMAIL</label>
+    
+                    <input type="email" class="form-control btn-outline-dark border-0 bg-light px-4" formControlName="email" placeholder="Your Email" [class.is-invalid]="email.invalid && email.touched" style="height: 55px;">
+    
+                    <div *ngIf="email.touched">
+    
+                        <div *ngIf="email.invalid">
+    
+                        <small style="color: red;" *ngIf="email.errors?.['required']">Admin Email required,please fill out the required field</small>
+    
+                        <small style="color: red;" *ngIf="email.errors?.['pattern']">Invalid Email[ends in org/in/com]</small>
+    
+                           
+    
+                        </div>
+    
+                    </div>
+    
+               </div>
+    
+     
+    
+               <div class="col-md-6">
+    
+                <label for="Admin password">PASSWORD</label>
+    
+                <input type="password" class="form-control btn-outline-dark border-0 bg-light px-4" formControlName="password" placeholder="Your password" [class.is-invalid]="password.invalid && password.touched" style="height: 55px;">
+    
+                <div *ngIf="password.touched">
+    
+                    <div *ngIf="password.invalid">
+    
+                    <small style="color: red;" *ngIf="password.errors?.['required']">Admin password required, please filled out the required field</small>
+    
+                    <small style="color: red;" *ngIf="password.errors?.['pattern']">Oops, invalid Password format ( Eg. Yamini@123 - Atleast one uppercase, one lowercase,number and special characters @$!%*?& 8-15 characters)</small>
+    
+                       
+    
+                    </div>
+    
+                </div>
+    
+           </div>
+    
+     
+    
+           <div class="col-md-6">
+    
+            <label for="Admin dob">DATE OF BIRTH</label>
+    
+            <input type="date" class="form-control btn-outline-dark border-0 bg-light px-4" formControlName="dob" placeholder="Your DOB" [class.is-invalid]="dob.invalid && dob.touched" style="height: 55px;">
+    
+            <div *ngIf="dob.touched">
+    
+                <div *ngIf="dob.invalid">
+    
+                <small style="color: red;" *ngIf="dob.errors?.['required']">Required field,please select your DOB</small>
+    
+                <!-- <small style="color: red;" *ngIf="validateDob(dob)">DOB should be before 2005</small> -->
+    
+                   
+    
+                </div>
+    
+            </div>
+    
+       </div>
+    
+             <div class="col-12">
+    
+                    <label for="Admin Address">ADDRESS</label>
+    
+                    <textarea class="form-control border-0 btn-outline-dark bg-light px-4 py-3" rows="3" formControlName="address" placeholder="Address" [class.is-invalid]="address.invalid && address.touched"></textarea>
+    
+                    <div *ngIf="address.touched">
+    
+                        <div *ngIf="address.invalid">
+    
+                    <small style="color: red;" *ngIf="address.errors?.['required']">Address required,please fill out the required field</small>
+    
+               </div></div>
+    
+                </div>
+    
+     
+    
+                <!-- <div class="col-md-6">
+    
+                    <label for="customer city">City</label>
+    
+                    <input type="text" class="form-control btn-outline-dark border-0 bg-light px-4" formControlName="city" placeholder="Your City" [class.is-invalid]="city.invalid && city.touched" style="height: 55px;">
+    
+                    <div *ngIf="city.touched">
+    
+                        <div *ngIf="city.invalid">
+    
+                        <small style="color: red;" *ngIf="city.errors?.['required']">Customer city required</small>
+    
+                        <small style="color: red;" *ngIf="city.errors?.['pattern']">city should contain only alphabets,dot and space</small>
+    
+                           
+    
+                        </div>
+    
+                    </div>
+    
+               </div>
+    
+     
+    
+               <div class="col-md-6">
+    
+                <label for="customer state">State</label>
+    
+                <input type="text" class="form-control btn-outline-dark border-0 bg-light px-4" formControlName="state" placeholder="Your State" [class.is-invalid]="state.invalid && state.touched" style="height: 55px;">
+    
+                <div *ngIf="state.touched">
+    
+                    <div *ngIf="state.invalid">
+    
+                    <small style="color: red;" *ngIf="state.errors?.['required']">Customer state required</small>
+    
+                    <small style="color: red;" *ngIf="state.errors?.['pattern']">State should contain only alphabets ,dot and space</small>
+    
+                       
+    
+                    </div>
+    
+                </div>
+    
+           </div> -->
+    
+     
+    
+     
+    
+     
+    
+     
+    
+           <!--state start-->
+    
+         
+    
+            <div class="col-md-6">
+    
+              <label for="State">STATE</label>
+    
+              <select class="form-control" formControlName="state"  (change) ="onStateChange()"  id="state">
+    
+                                  <option value="" selected>--Select State--</option>
+    
+                                  <option value="Andra Pradesh">Andra Pradesh</option>
+    
+                                 
+    
+                                  <option value="Karnataka">Karnataka</option>
+    
+                                  <option value="Kerala">Kerala</option>
+    
+                                  <option value="Madya Pradesh">Madya Pradesh</option>
+    
+                                  <option value="Maharashtra">Maharashtra</option>
+    
+                                  <option value="Manipur">Manipur</option>
+    
+                                  <option value="Meghalaya">Meghalaya</option>
+    
+                                  <option value="Mizoram">Mizoram</option>
+    
+                                  <option value="Nagaland">Nagaland</option>
+    
+                                  <option value="Orissa">Orissa</option>
+    
+                                  <option value="Punjab">Punjab</option>
+    
+                                  <option value="Rajasthan">Rajasthan</option>
+    
+                                  <option value="Sikkim">Sikkim</option>
+    
+                                  <option value="Tamil Nadu">Tamil Nadu</option>
+    
+                                  <option value="Telangana">Telangana</option>
+    
+                                  <option value="Tripura">Tripura</option>
+    
+                                  <option value="Uttaranchal">Uttaranchal</option>
+    
+                                  <option value="Uttar Pradesh">Uttar Pradesh</option>
+    
+                                  <option value="West Bengal">West Bengal</option>
+    
+                                  <option disabled style="background-color:#aaa; color:#fff">UNION Territories</option>
+    
+                                  <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+    
+                                  <option value="Chandigarh">Chandigarh</option>
+    
+                                  <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+    
+                                  <option value="Daman and Diu">Daman and Diu</option>
+    
+                                  <option value="Delhi">Delhi</option>
+    
+                                  <option value="Lakshadeep">Lakshadeep</option>
+    
+                                  <option value="Pondicherry">Pondicherry</option>
+    
+                                </select>
+    
+                                <div *ngIf="state.touched">
+    
+                                    <div *ngIf="state.invalid">
+    
+                                    <small style="color: red;" *ngIf="state.errors?.['required']">State required,please select your state</small>
+    
+                                    <small style="color: red;" *ngIf="state.errors?.['pattern']">State should contain only alphabets,dot and space</small>
+    
+                                       
+    
+                                    </div>
+    
+                                </div>
+    
+            </div>
+    
+           <!--state end-->
+    
+     
+    
+           <!--district start-->
+    
+           <div class="col-md-6">
+    
+     
+    
+            <label for="district">DISTRICT</label>
+    
+       
+    
+            <select class="form-control" id="district" formControlName="district" (change) ="onDistrictChange()">
+    
+       
+    
+                <option value="">--Select District-- </option>
+    
+       
+    
+                <option *ngFor="let district of districts" [value]="district" >{{ district }}</option>
+    
+       
+    
+            </select>
+    
+            <div *ngIf="district.touched">
+    
+                <div *ngIf="district.invalid">
+    
+                <small style="color: red;" *ngIf="district.errors?.['required']">District required,please select your valid district</small>
+    
+                <small style="color: red;" *ngIf="district.errors?.['pattern']">District should contain only alphabets,dot and space</small>
+    
+                   
+    
+                </div>
+    
+            </div>
+    
+          </div>
+    
+           <!--district end-->
+    
+     
+    
+           <!-- <div class="col-md-6">
+    
+            <label for="customer country">Country</label>
+    
+            <input type="text" class="form-control btn-outline-dark border-0 bg-light px-4" formControlName="country" placeholder="Your Country" [class.is-invalid]="country.invalid && country.touched" style="height: 55px;">
+    
+            <div *ngIf="country.touched">
+    
+                <div *ngIf="country.invalid">
+    
+                <small style="color: red;" *ngIf="country.errors?.['required']">Customer country required</small>
+    
+                <small style="color: red;" *ngIf="country.errors?.['pattern']">Country should contain only alphabets,dot and space</small>
+    
+                   
+    
+                </div>
+    
+            </div>
+    
+       </div>
+    
+     
+    
+       <div class="col-md-6">
+    
+        <label for="customer pincode">Pincode</label>
+    
+        <input type="text" class="form-control btn-outline-dark border-0 bg-light px-4" formControlName="pincode" placeholder="Your pincode" [class.is-invalid]="pincode.invalid && pincode.touched" style="height: 55px;">
+    
+        <div *ngIf="pincode.touched">
+    
+            <div *ngIf="pincode.invalid">
+    
+            <small style="color: red;" *ngIf="pincode.errors?.['required']">Customer pincode required</small>
+    
+            <small style="color: red;" *ngIf="pincode.errors?.['pattern']">pincode should contain only numbers</small>
+    
+               
+    
+            </div>
+    
+        </div>
+    
+    </div> -->
+    
+     
+    
+    <div class="col-md-6">
+    
+        <label for="Admin phone">CONTACT</label>
+    
+        <input type="number" class="form-control btn-outline-dark border-0 bg-light px-4" formControlName="phone" placeholder="Your phoneno" [class.is-invalid]="phone.invalid && phone.touched" style="height: 55px;">
+    
+        <div *ngIf="phone.touched">
+    
+            <div *ngIf="phone.invalid">
+    
+            <small style="color: red;" *ngIf="phone.errors?.['required']">Contact Number required</small>
+    
+            <small style="color: red;" *ngIf="phone.errors?.['pattern']">Phone number must starts with 6-9 and only contains 10 digit</small>
+    
+               
+    
+            </div>
+    
+        </div>
+    
+    </div>
+    
+     
+    
+    <div class="col g-3">
+    
+    <label for="gender">GENDER</label>
+    
+    <div class="form-check">
+    
+     
+    
+        <input class="form-check-input" type="radio" id="male" formControlName="gender" value="male">
+    
+     
+    
+        <label class="form-check-label" for="male">
+    
+     
+    
+          Male
+    
+     
+    
+        </label>
+    
+     
+    
+      </div>
+    
+     
+    
+       
+    
+     
+    
+      <div class="form-check">
+    
+     
+    
+        <input class="form-check-input" type="radio" id="female" formControlName="gender" value="female">
+    
+     
+    
+        <label class="form-check-label" for="female">
+    
+     
+    
+          Female
+    
+     
+    
+        </label>
+    
+     
+    
+      </div>
+    
+      <div>
+    
+       
+    
+      </div>
+    
+     
+    
+     
+    
+      <div class="form-check">
+    
+     
+    
+        <input class="form-check-input" type="radio" id="other" formControlName="gender" value="other">
+    
+     
+    
+        <label class="form-check-label" for="other">
+    
+     
+    
+          Others
+    
+     
+    
+        </label>
+    
+     
+    
+      </div>
+    
+      <div *ngIf="gender.touched">
+    
+        <div *ngIf="gender.invalid">
+    
+      <small style="color: red;" *ngIf="gender.errors?.['required']">Gender required</small>
+    
+     
+    
+            </div>
+    
+        </div></div>
+
+
+        <div class="col-md-6">
+    
+            <label for="Admin LinkedIn">LINKEDIN</label>
+
+            <input type="linkedin" class="form-control btn-outline-dark border-0 bg-light px-4" formControlName="linkedin" placeholder="Your Linkedin url" [class.is-invalid]="linkedin.invalid && linkedin.touched" style="height: 55px;">
+
+            <div *ngIf="linkedin.touched">
+
+                <div *ngIf="linkedin.invalid">
+
+                <small style="color: red;" *ngIf="linkedin.errors?.['required']">Please provide your LinkedIn Url</small>
+
+                <small style="color: red;" *ngIf="linkedin.errors?.['pattern']"></small>
+
+                   
+
+                </div>
+
+            </div>
+
+       </div>
+
+        <div class="col-md-6">
+    
+            <label for="Admin FaceBook">FACEBOOK</label>
+
+            <input type="facebook" class="form-control btn-outline-dark border-0 bg-light px-4" formControlName="facebook" placeholder="Your facebook url" [class.is-invalid]="facebook.invalid && facebook.touched" style="height: 55px;">
+
+            <div *ngIf="facebook.touched">
+
+                <div *ngIf="facebook.invalid">
+
+                <small style="color: red;" *ngIf="facebook.errors?.['required']">Please provide your FaceBook Url</small>
+
+                <small style="color: red;" *ngIf="facebook.errors?.['pattern']"></small>
+
+                   
+
+                </div>
+
+            </div>
+
+       </div>
+
+       <div class="col-md-6">
+    
+        <label for="Admin Instagram">INSTAGRAM</label>
+
+        <input type="instagram" class="form-control btn-outline-dark border-0 bg-light px-4" formControlName="instagram" placeholder="Your Instagram url" [class.is-invalid]="instagram.invalid && instagram.touched" style="height: 55px;">
+
+        <div *ngIf="instagram.touched">
+
+            <div *ngIf="instagram.invalid">
+
+            <small style="color: red;" *ngIf="instagram.errors?.['required']">Please fill out the required field</small>
+
+            <small style="color: red;" *ngIf="instagram.errors?.['pattern']"></small>
+
+            </div>
+
+        </div>
+
+   </div>
+    
+   <div class="row g-3">
+                <div class="col-6">
+    
+                    <button class="btn btn-dark w-100 py-3" type="submit" [disabled]="registrationForm.invalid">Register</button>
+    
+                </div>
+    
+                <div class="col-6">
+    
+                    <button class="btn btn-dark w-100 py-3" type="reset">Clear</button>
+    
+               
+    <br>
+    <br>
+                <div style="color: #f5a425;" *ngIf="message" class="sucessmessage">{{message}} </div>
+    
+            </div>
+   </div>
+</div>
+    
+        </form>
+    
+    </div></div>
+</div>
+</div>
+</div>
+</div>
+    
+    
+    <!--register form end-->
+   
+
+    <!-- Jquery JS-->
+    <script src="..assets/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="..assets/vendor/select2/select2.min.js"></script>
+    <script src="..assets/vendor/datepicker/moment.min.js"></script>
+    <script src="..assets/vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="register.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->

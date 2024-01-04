@@ -1,0 +1,554 @@
+<ng-component id=""></ng-component>
+
+<!--header-->
+<header class="main-header clearfix" role="header">
+    <div class="logo">
+      <a href="#"><em>Pro</em>Vue</a>
+    </div>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+      <ul class="main-menu">
+        <li><a href="#section1"> <i class="bi bi-house-fill"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+          <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
+          <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>
+        </svg></i>Home</a></li>
+
+         <li> <!--<a href="#section4">Courses</a> -->
+          <div class="main">
+            <!-- Another variation with a button -->
+            <!-- <div class="input-group">
+               <input type="text" class="form-control" placeholder="Search this blog">
+               <div class="input-group-append">
+                  <button class="btn btn-secondary" type="button" style="background-color: #f5a425; border-color:#f5a425 ">
+                  <i class="fa fa-search"></i>
+                  </button>
+               </div>
+            </div> -->
+         </div></li>
+         <li><a href="wired" ><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-usb-plug-fill" viewBox="0 0 16 16">
+          <path d="M6 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4H6v-4ZM7 1v1h1V1H7Zm2 0v1h1V1H9ZM5.5 5a.5.5 0 0 0-.5.5v4.894a2 2 0 0 0 .336 1.11l.83 1.245c.544.816.834 1.774.834 2.754 0 .275.222.497.497.497h2.006a.497.497 0 0 0 .497-.497c0-.98.29-1.938.834-2.754l.83-1.245a2 2 0 0 0 .336-1.11V5.5a.5.5 0 0 0-.5-.5h-6Z"/>
+        </svg> Wired Producuts</a></li>
+        <!-- <li><a href="wired" (click)="setProductCategory('WiredLine')">WiredProducuts</a></li> -->
+        <!-- <li><a href="#section6">Contact</a></li> -->
+        <!-- <li><a href="https://templatemo.com" class="external">External</a></li> -->
+		<!-- <div class="login_menu"> -->
+			<!-- <ul> -->
+			   <li> <!--<a href="#"> -->
+          <a routerLink="/wireless" >
+            <i class="bi bi-wifi">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
+            <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
+            <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
+          </svg>
+				 </i>
+				  <span class="padding_10">   Wireless Products</span></a>
+			   </li>
+			   <!-- <li><a routerLink="/business">
+				  <i class="fa fa-user" aria-hidden="true"></i>
+				  <span class="padding_10"  data-toggle="modal" data-target="#loginModal">BusinessProducts</span></a>  
+			   </li> -->
+			<!-- </ul> -->
+		 <!-- </div> -->
+      </ul>
+	  <!-- <div class="login_menu">
+		<ul>
+		   <li><a href="#">
+			 <i class="bi bi-pencil-square" aria-hidden="true">
+				 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+					 <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+					 <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+				   </svg>
+			 </i>
+			  <span class="padding_10">Register</span></a>
+		   </li><br>
+		   <li><a routerLink="/login">
+			  <i class="fa fa-user" aria-hidden="true"></i>
+			  <span class="padding_10"  data-toggle="modal" data-target="#loginModal">Login</span></a>  
+		   </li>
+		</ul>
+	 </div> -->
+    </nav>
+    <br><br><br><br>
+  </header>
+ <!-- ***** Main Banner Area Start ***** -->
+ <section class="section main-banner" id="top" data-section="section1">
+  <video autoplay muted loop id="bg-video">
+      <source src="assets/images/video2.mp4" type="video/mp4" />
+  </video>
+
+  <div class="video-overlay header-text">
+  
+      <div class="caption">
+<br><br>
+<br><br>
+        <h6><svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+        </svg>{{username}}</h6>
+          
+          <h2><em>Explore </em> a World of Possibilities in Our <em>Product Catalog App</em></h2>
+          <div class="main-button">
+            <br>
+          <br>
+              <!-- <div class="scroll-to-section"><a href="/viewplans">Discover more</a></div> -->
+              <br>
+              <h6>Your Connection, No Boundaries</h6>
+              <br>
+              <br>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- ***** Main Banner Area End ***** -->
+
+  
+  
+        <div class="container">
+         
+
+          <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <!-- <div *ngFor="let p of editProducts"> -->
+              {{this.p}}
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                
+            <!-- <div class="box-form"> -->
+
+             
+              <div class="modal-content">
+                
+        
+              <div class="container">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+                <div class="row">
+        
+                  
+          <div class="col-md-6">
+              <div class="right-content">
+                <div class="top-content">
+                  <h6>Adding Plans<em> To Get Immediate</em> Access To Products</h6>
+                </div>
+                <!-- <div class="form-container" style="display: none;"> -->
+                  <!-- <form id="edit-plan-form"> -->
+                <form  id="form1" name="form1" #form="ngForm" action="javascript:void(0);" onsubmit="return onSubmit();">
+                  
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h6>--Plan--</h6>
+                      <fieldset>
+                        <input name="plan" type="text" value="₹" class="form-control" id="plan" name="plan" [(ngModel)]="p.plan" [value]="p.plan" placeholder="Enter Plan" required="">
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <h6>--Select Category--</h6>
+                    <div class="centered">
+                      <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" [(ngModel)]="p.category" [value]="p.category" value="Enterprise">
+                        <label class="btn btn-outline-warning" for="btnradio1">Enterprise</label>
+                      
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" [(ngModel)]="p.category" [value]="p.category" value="Business">
+                        <label class="btn btn-outline-warning" for="btnradio2">Business</label>
+              
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" [(ngModel)]="p.category" [value]="p.category" value="Consumer">
+                        <label class="btn btn-outline-warning" for="btnradio3">Consumer</label>
+                    
+                      </div>
+                    </div>
+                    </div>
+                    <br>
+          
+                    <!-- <div class="col-md-12">
+                      <h6>--Select Product Category--</h6>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" [(ngModel)]="productcategory" value="WiredLine">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        WiredLine
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" [(ngModel)]="productcategory" value="WireLess">
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        WireLess
+                      </label>
+                    </div>
+                  </div> -->
+          <br>
+          
+          
+          
+                  <div class="col-md-12">
+                    <h6>--Select Product Sub-Category--</h6>
+                  <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
+                    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" [(ngModel)]="p.productsubcategory" [value]="p.productsubcategory" value="PrePaid">
+                    <label class="btn btn-outline-warning" for="vbtn-radio1">PrePaid</label>
+                    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off" [(ngModel)]="p.productsubcategory" [value]="p.productsubcategory" value="PostPaid">
+                    <label class="btn btn-outline-warning" for="vbtn-radio2">PostPaid</label>
+                  </div>
+                  </div>
+                
+          
+                    <div class="col-md-12">
+                      <h6>--Pack Validity-</h6>
+                      <fieldset>
+                        <input type="text" class="form-control" id="validity" name="validity"  [(ngModel)]="p.validity" [value]="p.validity" placeholder="Enter Pack Validity Details" required="">
+                      </fieldset>
+                    </div>
+          
+                    <!-- <div   class="col-md-12 pageElement" *ngIf="productcategory=='WiredLine'">
+                      <h6>---Bill Cycle-</h6>
+                      <fieldset>
+                      <select [(ngModel)]="billcycle" name="billcycle" id="inputState" class="form-select custom-select form-control" style="width: 350px; height: 40px;">
+                        
+                        <option value="billcycle" disabled selected>Bill Cycle</option>
+                    
+                        <option value="Monthly">Monthly</option>
+                        <option value="Quarterly">Quarterly</option>
+                        <option value="Semi-Annual">Semi-Annual</option>
+                        <option value="Annual">Annual</option>
+                    
+                      </select>
+                    </fieldset>
+                    
+                    </div> -->
+          
+                    <br>
+                   
+                   
+                    <div class="col-md-12">
+                      <h6>--Data-</h6>
+                      <fieldset>
+                        <input  type="text" class="form-control" id="data" name="data" [(ngModel)]="p.data" [value]="p.data" placeholder="Enter Total Data" required="">
+                      </fieldset>
+                    </div>
+                    <!-- <div class="col-md-12" *ngIf="productsubcategory=='PrePaid'"> -->
+                      <h6>--Data at High Speed--</h6>
+                      <fieldset>
+                        <input  type="text" class="form-control" id="dataperday" name="dataperday" [(ngModel)]="p.dataperday" [value]="p.dataperday" placeholder="Enter Data at High Speed Details for the pack" required="">
+                      </fieldset>
+                    <!-- </div> -->
+                    <!-- <div class="col-md-12" *ngIf="productcategory=='WireLess'"> -->
+                      <div class="col-md-12">
+                      <h6>--Voice Call--</h6>
+                      <fieldset>
+                        <input  type="text" class="form-control" id="voice" name="voice" [(ngModel)]="p.voice" [value]="p.voice" placeholder="Enter Calling Details" required>
+                      </fieldset>
+                    </div>
+                    <!-- <div class="col-md-12" *ngIf="productcategory=='WireLess'"> -->
+                      <div class="col-md-12">
+                      <h6>--SMS--</h6>
+                      <fieldset>
+                        <input  type="text" class="form-control" id="sms" name="sms" [(ngModel)]="p.sms" [value]="p.sms" placeholder="Enter SMS Details" required>
+                      </fieldset>
+                    </div>
+          
+                    <div class="col-md-12">
+                   <h6>--Select Subscriptions--</h6>
+                  <!-- <div class="form-floating"  *ngFor="let ps of p.subsciptions"> -->
+                    <!-- <div class="form-check form-check-inline"> -->
+                       <div class="form-floating">
+                      <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="inlineCheckbox1" name="subscriptions"  value="Netflix" >
+                      <label class="form-check-label" for="inlineCheckbox1">Netflix
+                      </label>
+                    </div>
+                  </div>
+                   </div>
+                    <br>
+          
+                    <div class="col-md-12">
+                      <div class="form-floating">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="inlineCheckbox2" name="subscriptions"  value="Amazon Prime" >
+                      <label class="form-check-label" for="inlineCheckbox2">Amazon Prime
+                      </label>
+                    </div>
+                      </div>
+                    </div> 
+                    <br>
+                    <div class="col-md-12">
+                      <div class="form-floating">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="inlineCheckbox3"  name="subscriptions"  value="Zee5" >
+                      <label class="form-check-label" for="inlineCheckbox3">Zee5
+                      </label>
+                    </div>
+                      </div>
+                    </div> 
+                    <div class="col-md-12">
+                      <div class="form-floating">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="inlineCheckbox4" name="subscriptions"   value="Sony Liv" >
+                      <label class="form-check-label" for="inlineCheckbox4">Sony Liv
+                      </label>
+                    </div>
+                      </div>
+                    </div> 
+                    <div class="col-md-12">
+                      <div class="form-floating">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="inlineCheckbox5" name="subscriptions"   value="Disney+Hotstar" >
+                      <label class="form-check-label" for="inlineCheckbox5">Disney+Hotstar
+                      </label>
+                    </div>
+                      </div>
+                    </div> 
+                    <div class="col-md-12">
+                      <div class="form-floating">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" name="subscriptions" id="inlineCheckbox6"   value="Spotify" >
+                      <label class="form-check-label" for="inlineCheckbox6">Spotify
+                      </label>
+                    </div>
+                      </div>
+                    </div> 
+          <br>
+                    <div class="col-md-12">
+                      <h6>--Add on Subscriptions--</h6>
+                      <fieldset>
+                        <input  type="text" class="form-control" id="addon" name="addon" [(ngModel)]="p.addon" [value]="p.addon" placeholder="Enter number of addon" required>
+                      </fieldset>
+                    </div>
+
+                    <br>
+                    
+                    <div class="col-md-12">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="button" class="btn btn-warning" (click)="onEditSubmit(p)">Edit Plan</button>
+                      </fieldset>
+                    </div>
+                    <div *ngIf="editedStatus" class="text-success">Plan Edited Successfully!!  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up-fill" viewBox="0 0 16 16">
+                      <path d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"/>
+                    </svg></div>
+                  </div>
+                  <!-- {{products|json}}
+                  {{p|json}} -->
+          
+          
+                </form>
+                <!-- </div> -->
+              </div>
+              </div>
+                </div>
+            </div>
+              
+        <!-- <div class="tag">Buy</div> -->
+        </div>
+        </div>
+          <!-- </div> -->
+        </div>
+        </div>
+
+
+      <!-- WiredProducuts -->
+
+      <div class="container">
+      
+        <div class="modal fade" id="loginModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              {{this.p}}
+          <div class="modal-content">
+           
+            <div class="container">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+              <div class="row">
+                
+        <div class="col-md-6">
+        
+            <div class="right-content">
+              <div class="top-content">
+                <h6>Adding Plans<em> To Get Immediate</em> Access To Products</h6>
+              </div>
+              
+              <!-- <div class="form-container" style="display: none;"> -->
+                <!-- <form id="edit-plan-form"> -->
+              <!-- <form id="contact" action="" method="get"> -->
+                <form  id="form1" name="form1" #form="ngForm" action="javascript:void(0);" onsubmit="return onSubmit();">
+                
+                <div class="row">
+                  <div class="col-md-12">
+                    <h6>--Plan--</h6>
+                    <fieldset>
+                      <input name="plan" type="text" value="₹" class="form-control" id="plan" name="plan" [(ngModel)]="p.plan" [value]="p.plan" placeholder="Enter Plan" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12">
+                    <h6>--Select Category--</h6>
+                  <div class="centered">
+                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                      <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" [(ngModel)]="p.category" [value]="p.category" value="Enterprise">
+                      <label class="btn btn-outline-warning" for="btnradio1">Enterprise</label>
+                    
+                      <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" [(ngModel)]="p.category"  [value]="p.category" value="Business">
+                      <label class="btn btn-outline-warning" for="btnradio2">Business</label>
+            
+                      <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" [(ngModel)]="p.category" [value]="p.category" value="Consumer">
+                      <label class="btn btn-outline-warning" for="btnradio3">Consumer</label>
+                  
+                    </div>
+                  </div>
+                  </div>
+                  <br>
+        <br>
+   
+                <div class="col-md-12">
+                  <h6>--Select Product Sub-Category--</h6>
+                <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
+                  <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" [(ngModel)]="p.productsubcategory" [value]="p.productsubcategory" value="PrePaid">
+                  <label class="btn btn-outline-warning" for="vbtn-radio1">PrePaid</label>
+                  <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off" [(ngModel)]="p.productsubcategory"  [value]="p.productsubcategory" value="PostPaid">
+                  <label class="btn btn-outline-warning" for="vbtn-radio2">PostPaid</label>
+                </div>
+                </div>
+              
+        
+                  <div class="col-md-12">
+                    <h6>--Pack Validity-</h6>
+                    <fieldset>
+                      <input name="Pack Validity" type="text" class="form-control" id="validity" name="validity" [(ngModel)]="p.validity" [value]="p.validity" placeholder="Enter Pack Validity Details" required="">
+                    </fieldset>
+                  </div>
+        
+                  <!-- <div   class="col-md-12 pageElement" *ngIf="productcategory=='WiredLine'"> -->
+                    <div   class="col-md-12 pageElement">
+
+                  <h6>---Bill Cycle-</h6>
+                    <fieldset>
+                    <select [(ngModel)]="p.billcycle"  [value]="p.billcycle" name="billcycle" id="inputState" class="form-select custom-select form-control" style="width: 350px; height: 40px;">
+                      
+                      <option value="billcycle" disabled selected>Bill Cycle</option>
+                  
+                      <option value="Monthly">Monthly</option>
+                      <option value="Quarterly">Quarterly</option>
+                      <option value="Semi-Annual">Semi-Annual</option>
+                      <option value="Annual">Annual</option>
+                  
+                    </select>
+                  </fieldset>
+                  
+                  </div>
+        
+                  <br>
+                 
+                 
+                  <div class="col-md-12">
+                    <h6>--Data-</h6>
+                    <fieldset>
+                      <input name="Data" type="text" class="form-control" id="data" name="data" [(ngModel)]="p.data" [value]="p.data"  placeholder="Enter Total Data" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12" *ngIf="productsubcategory=='PrePaid'">
+                    <h6>--Data at High Speed--</h6>
+                    <fieldset>
+                      <input name="Data High Speed" type="text" class="form-control" id="dataperday" name="dataperday" [(ngModel)]="p.dataperday" [value]="p.dataperday" placeholder="Enter Data at High Speed Details for the pack" required="">
+                    </fieldset>
+                  </div>
+                  <!-- <div class="col-md-12" *ngIf="productcategory=='WireLess'"> -->
+                    <div class="col-md-12">
+                    <h6>--Voice Call--</h6>
+                    <fieldset>
+                      <input name="VoiceCalls" type="text" class="form-control" id="voice" name="voice" [(ngModel)]="p.voice"  [value]="p.voice" placeholder="Enter Calling Details" required="">
+                    </fieldset>
+                  </div>
+
+                  <!-- <div class="col-md-12" *ngIf="productcategory=='WireLess'">
+                    <h6>--SMS--</h6>
+                    <fieldset>
+                      <input name="Sms" type="text" class="form-control" id="sms" name="sms" [(ngModel)]="p.sms" [value]="p.sms" placeholder="Enter SMS Details" required="">
+                    </fieldset>
+                  </div> -->
+        
+                  <div class="col-md-12">
+                 <h6>--Select Subscriptions--</h6>
+                <div class="form-floating">
+                  <!-- <div class="form-check form-check-inline"> -->
+                    <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="inlineCheckbox1" value="Netflix" [(ngModel)]="p.subscriptions" [value]="p.subscriptions" value="Netflix">
+                    <label class="form-check-label" for="inlineCheckbox1">Netflix
+                    </label>
+                  </div>
+                </div>
+                 </div>
+                  <br>
+        
+                  <div class="col-md-12">
+                    <div class="form-floating">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="inlineCheckbox2" value="Amazon Prime" [(ngModel)]="p.subscriptions" [value]="p.subscriptions" value="Amazon Prime">
+                    <label class="form-check-label" for="inlineCheckbox2">Amazon Prime
+                    </label>
+                  </div>
+                    </div>
+                  </div> 
+                  <br>
+                  <div class="col-md-12">
+                    <div class="form-floating">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="inlineCheckbox3" value="Zee5" [(ngModel)]="p.subscriptions" [value]="p.subscriptions" value="Zee5">
+                    <label class="form-check-label" for="inlineCheckbox3">Zee5
+                    </label>
+                  </div>
+                    </div>
+                  </div> 
+                  <div class="col-md-12">
+                    <div class="form-floating">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="inlineCheckbox4" value="Sony Liv" [(ngModel)]="p.subscriptions" [value]="p.subscriptions" value="Sony Liv">
+                    <label class="form-check-label" for="inlineCheckbox4">Sony Liv
+                    </label>
+                  </div>
+                    </div>
+                  </div> 
+                  <div class="col-md-12">
+                    <div class="form-floating">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="inlineCheckbox5" value="Disney+Hotstar" [(ngModel)]="p.subscriptions" [value]="p.subscriptions" value="Disney+Hotstar">
+                    <label class="form-check-label" for="inlineCheckbox5">Disney+Hotstar
+                    </label>
+                  </div>
+                    </div>
+                  </div> 
+                  <div class="col-md-12">
+                    <div class="form-floating">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="inlineCheckbox6" value="Spotify" [(ngModel)]="p.subscriptions" [value]="p.subscriptions" value="Spotify">
+                    <label class="form-check-label" for="inlineCheckbox6">Spotify
+                    </label>
+                  </div>
+                    </div>
+                  </div> 
+        <br>
+                  <div class="col-md-12">
+                    <h6>--Add on Subscriptions--</h6>
+                    <fieldset>
+                      <input name="addon" type="text" class="form-control" id="addon" name="addon" [(ngModel)]="p.addon" [value]="p.addon" placeholder="Enter number of addon akk" required="">
+                    </fieldset>
+                  </div>
+                  
+                  <div class="col-md-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="button" class="btn btn-warning" (click)="onEditSubmit(p)">Edit Plan</button>
+                    </fieldset>
+                  </div>
+                  <div *ngIf="editedStatus" class="text-success">Plan Edited Successfully!!  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up-fill" viewBox="0 0 16 16">
+                    <path d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"/>
+                  </svg></div>
+                </div>
+                <!-- {{products|json}}
+                {{p|json}} -->
+        
+              </form>
+              <!-- </div> -->
+            </div>
+            </div>
+              </div>
+          </div>
+      <!-- <div class="tag">Buy</div> -->
+      </div>
+      </div>
+        </div>
+      </div>
+      
+   

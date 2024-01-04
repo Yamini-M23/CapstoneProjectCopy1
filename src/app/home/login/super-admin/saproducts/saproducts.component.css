@@ -1,0 +1,72 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #f5a425;
+}
+
+h3 {
+    text-align: center;
+    color: #f5a425;
+}
+
+table {
+    width: 100%;
+    border: 2px solid #f5a425;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+    border-right: 2px solid #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-group button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.approve {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.approve:hover {
+    background-color: #45a049;
+}
+
+.delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete:hover {
+    background-color: #d32f2a;
+}
+
+/* .products
+{
+    background-image: url("C:\Users\yamini.m\Desktop\Capstone Project\ProC\src\assets\images\pic2.png");
+} */

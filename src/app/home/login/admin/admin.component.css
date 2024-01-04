@@ -1,0 +1,6 @@
+.why-us{
+    background-image: url('C:\Users\yamini.m\Desktop\Capstone Project\ProC\src\assets\images\contact-bg.jpg'); /* Specify the path to your image file */
+    background-size: cover; /* Adjust this property to control the image size */
+    background-position: center; /* Adjust this property to control the image position */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
